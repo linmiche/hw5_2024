@@ -29,8 +29,8 @@ body {
 /* Step 3 */
 header {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
 /* Step 4 */
@@ -69,9 +69,6 @@ a, a:visited {
 }
 .card {
     flex-basis: 450px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    max-width: 450px;
 }
 
 /* Step 9 */
@@ -94,7 +91,7 @@ a, a:visited {
 header {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .nav_links {
@@ -115,11 +112,10 @@ header {
 }
 
 /* Step 13 */
-header:first-of-type {
+body > header:nth-child(1) {
     position: sticky;
     width: 100%;
     top: 0;
-    z-index: 1000;
 }
 }
 
@@ -165,16 +161,15 @@ nav {
 }
 
 /* Step 20 */
-.gallery {
-    display: none;
-}
-
 #gallery {
     visibility: hidden;
 }
 
+.gallery {
+    display: none;
+}
 /* Step 21 */
-.card li:nth-last-of-type(2)::after {
+.card ul li:nth-last-of-type(2)::after {
     content: "👍";
 }
 }
